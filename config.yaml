@@ -1,0 +1,20 @@
+# Configuración del proyecto: Yaquis de Obregón (LMP)
+source:
+  name: "MLB Stats API - Winter Leagues (LMP)"
+  api_root: "https://statsapi.mlb.com"
+  sport_id: 17
+  league_id: 132
+  allowed_game_types: ["R", "F", "D", "L", "W"]  # Excluye pretemporada/exhibición (S, E)
+  teams:
+    yaquis: 680
+    aguilas_mexicali: 673
+
+scraping:
+  seasons_pilot: [2025, 2026]  # 2025-26 completa + 2026-27 en curso
+  seasons_all_range: [2006, 2026]
+  rate_limit_seconds: 0.25
+  timeout_seconds: 20
+  user_agent: "lmp-yaquis-research/1.0"
+
+storage:
+  sqlite_path: "data/yaquis_lmp.db"

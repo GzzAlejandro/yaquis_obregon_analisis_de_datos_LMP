@@ -1,0 +1,28 @@
+# Bases de datos SQLite pesadas (>300 MB) — reconstruibles localmente
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.sqlite
+data/*.sqlite3
+
+# Entornos y artefactos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Sesiones y cachés de notebooks Marimo
+notebooks/__marimo__/
+
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+
+# Logs y temporales de sistema
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
