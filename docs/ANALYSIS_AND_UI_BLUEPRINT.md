@@ -1,5 +1,10 @@
 # Yaquis de Obregón (LMP) — Auditoría Estadística Profunda y Blueprint de Storytelling & Dashboard
 
+> [!NOTE]
+> **Estado respecto al producto final:** Este documento corresponde al **blueprint de auditoría y diseño inicial**.
+> - Aunque la **Sección 4.1** recomendaba originalmente construir la aplicación en **Plotly Dash**, la versión final implementada se desarrolló como una **SPA estática 100% autocontenida (`web/index.html`)** en **Vanilla JS + SVG nativo + Tailwind CSS v3.4.17 estático** (compilada por `scripts/build_spa_html.py` y desplegada en GitHub Pages).
+> - Aunque el **Acto 5** y la **Sección 5** mencionaban la corrección de `is_risp` como un paso pendiente, ese ajuste **ya fue implementado y revalidado** en `scraper/parser.py` y `scripts/enrich_and_fix_risp.py` (como documenta la **Sección 1.3.4**) y los splits situacionales `RISP` están activos en el dashboard final.
+
 > **Alcance:** Análisis de solo lectura sobre `data/yaquis_lmp.db` (vista `v_valid_games`) cubriendo el contexto histórico **2006–2026**, la temporada **2025–26** (`1ra Vuelta <= 2025-11-23`, `2da Vuelta >= 2025-11-24`, `Playoffs`), el cruce ante **Águilas de Mexicali (`team_id=673`)**, y el arranque **2026–27 YTD** (al `2026-11-15`).
 >
 > **Principio rector:** Todas las cifras, nombres de jugadores, `game_pk` y pruebas estadísticas provienen directamente de la ejecución verificada de `deep_analysis.py`. Se distinguen explícitamente los hallazgos confirmados, matizados y refutados, junto con las limitaciones de muestra (`n = 4` juegos en Playoffs 2025–26).

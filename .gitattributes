@@ -1,0 +1,5 @@
+# Excluir artefactos compilados/generados de la barra de lenguajes de GitHub (Linguist)
+# y colapsarlos por defecto en diffs de Pull Requests
+web/index.html linguist-generated=true
+web/data/*.json linguist-generated=true
+web/assets/*.css linguist-generated=true

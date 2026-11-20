@@ -24,6 +24,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Verify static web artifacts
+        run: |
+          test -s ./web/index.html
+          test -s ./web/assets/og_preview.png
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 

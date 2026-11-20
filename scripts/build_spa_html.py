@@ -19,6 +19,23 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <meta name="referrer" content="no-referrer" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; font-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none';" />
   <title>Centro de Mando · Analítica 360° & Scouting — Club Yaquis de Ciudad Obregón (LMP)</title>
+  <meta name="description" content="Plataforma interactiva autocontenida de Analítica 360°, Sabermetría (wRC+, FIP, OPS+), Telemetría Statcast 2D y Scouting 20–80 para Club Yaquis de Ciudad Obregón en la LMP (2006–2026)." />
+  <!-- OpenGraph / LinkedIn & Social Preview (metadatos estáticos; cero peticiones en runtime bajo CSP estricto) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Yaquis de Obregón · Front Office Analytics (LMP)" />
+  <meta property="og:url" content="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/" />
+  <meta property="og:title" content="Dashboard Front Office · Club Yaquis de Ciudad Obregón (LMP 2006–2026)" />
+  <meta property="og:description" content="Analítica 360°, Sabermetría (wRC+, FIP, DER%), Spray Chart 2D, Zona de Strike 9-Zonas, Fatiga B2B y Scouting MLB 20–80 sobre 21 temporadas de la Liga ARCO Mexicana del Pacífico." />
+  <meta property="og:image" content="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/assets/og_preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dashboard Front Office Club Yaquis de Ciudad Obregón — Resumen Ejecutivo, KPIs LMP y Matriz Ofensiva vs Pitcheo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dashboard Front Office · Club Yaquis de Ciudad Obregón (LMP 2006–2026)" />
+  <meta name="twitter:description" content="Analítica 360°, Sabermetría, Telemetría Statcast 2D y Scouting 20–80 sobre 21 temporadas de la LMP." />
+  <meta name="twitter:image" content="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/assets/og_preview.png" />
   <style id="tw-static">__TAILWIND_CSS__</style>
   <style>
     :root {

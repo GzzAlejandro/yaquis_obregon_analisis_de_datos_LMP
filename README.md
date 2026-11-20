@@ -15,7 +15,52 @@
     <img src="https://img.shields.io/badge/Security-Zero_CDN_%7C_Strict_CSP-16A34A?style=for-the-badge" alt="Zero CDN / Strict CSP" />
     <img src="https://img.shields.io/badge/License-MIT-0F172A?style=for-the-badge" alt="License: MIT" />
   </p>
+
+  <p>
+    <a href="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/">
+      <img src="https://img.shields.io/badge/VER_DEMO_EN_VIVO-Dashboard_Front_Office_LMP-0095DA?style=for-the-badge&logo=githubpages&logoColor=white" alt="Ver Demo en Vivo — Dashboard Front Office LMP" />
+    </a>
+  </p>
+  <p>
+    <strong>Demo interactiva en vivo:</strong>
+    <a href="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/">https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/</a>
+  </p>
 </div>
+
+---
+
+## Vista Previa del Dashboard
+
+<table>
+  <tr>
+    <td width="50%">
+      <strong>01 · Resumen Ejecutivo &amp; Benchmarking LMP</strong><br />
+      <a href="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/">
+        <img src="docs/assets/01_resumen_ejecutivo.png" alt="01 Resumen Ejecutivo y Benchmarking LMP" />
+      </a>
+    </td>
+    <td width="50%">
+      <strong>02 · Bateo &amp; Spray Chart 2D (Estadio Yaquis)</strong><br />
+      <a href="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/">
+        <img src="docs/assets/02_spray_chart.png" alt="02 Bateo y Spray Chart 2D" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <strong>03 · Pitcheo, Zona de Strike 2D &amp; Fatiga B2B</strong><br />
+      <a href="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/">
+        <img src="docs/assets/03_zona_2d_fatiga.png" alt="03 Pitcheo, Zona 2D y Semáforo de Fatiga" />
+      </a>
+    </td>
+    <td width="50%">
+      <strong>04 · Scouting 360° (Escala 20–80 &amp; Percentiles)</strong><br />
+      <a href="https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/">
+        <img src="docs/assets/04_scouting_360.png" alt="04 Scouting 360 y Biometría" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -104,14 +149,20 @@ flowchart LR
 ## Estructura del Repositorio
 
 ```text
-04-lmp-yaquis-obregon/
+yaquis_obregon_analisis_de_datos_LMP/
+├── .gitattributes                      # Marca web/index.html, JSON y CSS compilado como linguist-generated
 ├── .github/workflows/
 │   └── pages.yml                       # Despliegue automático a GitHub Pages desde ./web
 ├── config.yaml                         # Parámetros API LMP, equipos y temporadas (2006–2026)
 ├── requirements.txt                    # Dependencias Python verificadas
 ├── LICENSE                             # Licencia MIT (código fuente)
 ├── docs/
-│   └── ANALYSIS_AND_UI_BLUEPRINT.md    # Diseño analítico y blueprint de arquitectura
+│   ├── ANALYSIS_AND_UI_BLUEPRINT.md    # Diseño analítico y blueprint de arquitectura
+│   └── assets/                         # 4 capturas preview en alta resolución del dashboard
+│       ├── 01_resumen_ejecutivo.png
+│       ├── 02_spray_chart.png
+│       ├── 03_zona_2d_fatiga.png
+│       └── 04_scouting_360.png
 ├── notebooks/
 │   ├── 01_auditoria_marimo.py          # Auditoría reactiva de integridad en SQLite
 │   └── 02_eda_yaquis_marimo.py         # Análisis exploratorio 1ra Vuelta / 2da Vuelta / Playoffs
@@ -131,7 +182,7 @@ flowchart LR
 │   └── build_spa_html.py               # Compilador final del HTML autocontenido (web/index.html)
 └── web/
     ├── index.html                      # Producto final listo para GitHub Pages (2.48 MB)
-    ├── assets/                         # tailwind.min.css + emblemas + 64 retratos cacheados
+    ├── assets/                         # tailwind.min.css + og_preview.png + emblemas + 64 retratos cacheados
     └── data/front_office_payload.json  # Payload analítico estructurado (2.17 MB)
 ```
 
@@ -185,7 +236,7 @@ marimo edit notebooks/02_eda_yaquis_marimo.py
 
 ## Despliegue en la Web
 
-- **GitHub Pages (automático):** Este repositorio ya incluye `.github/workflows/pages.yml`. Una vez subido a GitHub, solo ve a **Settings → Pages → Build and deployment → Source: GitHub Actions** y la carpeta `web/` se publicará automáticamente en cada push a `main`.
+- **GitHub Pages (en vivo y automático):** Disponible en [https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/](https://gzzalejandro.github.io/yaquis_obregon_analisis_de_datos_LMP/). Este repositorio incluye `.github/workflows/pages.yml` (`Settings → Pages → Build and deployment → Source: GitHub Actions`), publicando la carpeta `web/` automáticamente en cada push a `main`.
 - **Netlify / Vercel / Cloudflare Pages:** Establece `web` como directorio de publicación estático (*Publish directory: `web`*); no requiere comando de build en la nube.
 
 ---
